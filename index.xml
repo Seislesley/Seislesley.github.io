@@ -1,32 +1,44 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My New Hugo Site</title>
-    <link>https://Seislesley.github.io/</link>
-    <description>Recent content on My New Hugo Site</description>
+    <title>不负时光</title>
+    <link>https://gdzhu8023.github.io/</link>
+    <description>Recent content on 不负时光</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <copyright>&amp;copy; 2017. All rights reserved.</copyright>
     <lastBuildDate>Wed, 24 Oct 2018 15:35:04 +0800</lastBuildDate>
     
-	<atom:link href="https://Seislesley.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://gdzhu8023.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>First</title>
-      <link>https://Seislesley.github.io/post/first/</link>
+      <link>https://gdzhu8023.github.io/post/first/</link>
       <pubDate>Wed, 24 Oct 2018 15:35:04 +0800</pubDate>
       
-      <guid>https://Seislesley.github.io/post/first/</guid>
+      <guid>https://gdzhu8023.github.io/post/first/</guid>
       <description></description>
     </item>
     
     <item>
       <title>About</title>
-      <link>https://Seislesley.github.io/about/</link>
+      <link>https://gdzhu8023.github.io/about/</link>
       <pubDate>Wed, 24 Oct 2018 15:34:47 +0800</pubDate>
       
-      <guid>https://Seislesley.github.io/about/</guid>
+      <guid>https://gdzhu8023.github.io/about/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://gdzhu8023.github.io/post/test/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gdzhu8023.github.io/post/test/</guid>
+      <description>考试 大题：计算，推导（公式，作业），格林函数相关（基本公式给出），“Hook定律，应力应变关系”需记住 判断题，错误需给出理由； 简答题，什么叫格林函数？什么是应力，应变，应力张量，描述什么？如何描述一个点的应力状态。弹性体基本假设。 柯西公式？ 弹性动力学方程，一套方程，15个 费力第一二定理在做什么 位移表示定理表示什么？特殊情况下的例子。 震源表示定理，基本思路。一个断层产生一个不连续位错，如何表示，说明了什么 等效体力，是否唯一，例子物理意义 力偶 无限介质中的格林函数求解有哪些方法，优缺点的比较 远场P波S波的性质，辐射花样 对简单的问题设立断层面，滑移量，进行求解
+面波 自由振荡求解思路。
+1：30-4:10</description>
     </item>
     
   </channel>
