@@ -21,13 +21,13 @@
   <!--<![endif]-->
 
   <!--[if lte IE 8]>
-  <link rel="stylesheet" href="https://Seislesley.github.io/css/side-menu-old-ie.css">
+  <link rel="stylesheet" href="https://seislesley.github.io/css/side-menu-old-ie.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
-  <link rel="stylesheet" href="https://Seislesley.github.io/css/side-menu.css">
+  <link rel="stylesheet" href="https://seislesley.github.io/css/side-menu.css">
   <!--<![endif]-->
 
-  <link rel="stylesheet" href="https://Seislesley.github.io/css/blackburn.css">
+  <link rel="stylesheet" href="https://seislesley.github.io/css/blackburn.css">
 
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -40,12 +40,12 @@
 
  
   
-  <link rel="alternate" type="application/rss+xml" title="不负时光" href="https://Seislesley.github.io/index.xml" />
+  <link rel="alternate" type="application/rss+xml" title="不负时光" href="https://seislesley.github.io/index.xml" />
   
 
   
 
-  <link rel="shortcut icon" href="https://Seislesley.github.io/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="https://seislesley.github.io/img/favicon.ico" type="image/x-icon" />
 
   
   
@@ -64,7 +64,7 @@
 <div id="menu">
 
   
-  <a class="pure-menu-heading brand" href="https://Seislesley.github.io/">Menu</a>
+  <a class="pure-menu-heading brand" href="https://seislesley.github.io/">Menu</a>
 
 
   <div class="pure-menu">
@@ -78,7 +78,7 @@
 
     
     <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://Seislesley.github.io/index.xml"><i class="fa fa-rss fa-fw"></i>RSS</a>
+      <a class="pure-menu-link" href="https://seislesley.github.io/index.xml"><i class="fa fa-rss fa-fw"></i>RSS</a>
     </li>
     
 
@@ -187,7 +187,40 @@
   
     <article>
   <header>
-    <h2><a href="https://Seislesley.github.io/post/first/">First</a></h2>
+    <h2><a href="https://seislesley.github.io/post/vnc/">VNC Viewer On Mac</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>18 Sep 2019, 14:00</time>
+  </div>
+
+  
+
+  
+
+  
+
+</div>
+
+  </header>
+
+  <p>
+  在mac上用VNC Viewer远程登陆服务器图形化界面 ##配置用户VNC Server，用gnome桌面显示 ssh username@IP ssh 登陆服务器 vi ~/.vnc/xstartup vi进入配置文件 按照上图修改，完成后保存即可生效。主要包括，将文件头前两行取消注释，文件末加入gnome的设置。
+##日常使用步骤 1. 在服务器端启动VNC Server ssh username@IP vncserver 启动VNC Server，启动后会返回端口值 如图，1即为本次建立的连接的端口值
+2. 在本地端用VNC Viewer远程连接 输入 IP:端口值 即可成功连接
+##服务器端VNCServer操作 vncserver -geometry 1080x720 用geometry选项设置显示区域大小，1080x720可根据个人需求修改 vncserver -list 显示当前账户已打开的vncserver显示端口 vncserver -kill :端口值 杀死该端口值的连接
+·
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://seislesley.github.io/post/first/">First</a></h2>
 
     <div class="post-meta">
 
@@ -216,7 +249,7 @@
   
     <article>
   <header>
-    <h2><a href="https://Seislesley.github.io/post/test/"></a></h2>
+    <h2><a href="https://seislesley.github.io/post/test/"></a></h2>
 
     <div class="post-meta">
 
@@ -253,7 +286,7 @@
 
 </div>
 </div>
-<script src="https://Seislesley.github.io/js/ui.js"></script>
+<script src="https://seislesley.github.io/js/ui.js"></script>
 
 
 <script>

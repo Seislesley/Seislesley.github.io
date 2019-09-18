@@ -2,40 +2,62 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>不负时光</title>
-    <link>https://Seislesley.github.io/</link>
+    <link>https://seislesley.github.io/</link>
     <description>Recent content on 不负时光</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017. All rights reserved.</copyright>
-    <lastBuildDate>Wed, 24 Oct 2018 15:35:04 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 18 Sep 2019 14:00:48 +0800</lastBuildDate>
     
-	<atom:link href="https://Seislesley.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://seislesley.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>VNC Viewer On Mac</title>
+      <link>https://seislesley.github.io/post/vnc/</link>
+      <pubDate>Wed, 18 Sep 2019 14:00:48 +0800</pubDate>
+      
+      <guid>https://seislesley.github.io/post/vnc/</guid>
+      <description>在mac上用VNC Viewer远程登陆服务器图形化界面 ##配置用户VNC Server，用gnome桌面显示 ssh username@IP ssh 登陆服务器 vi ~/.vnc/xstartup vi进入配置文件 按照上图修改，完成后保存即可生效。主要包括，将文件头前两行取消注释，文件末加入gnome的设置。
+##日常使用步骤 1. 在服务器端启动VNC Server ssh username@IP vncserver 启动VNC Server，启动后会返回端口值 如图，1即为本次建立的连接的端口值
+2. 在本地端用VNC Viewer远程连接 输入 IP:端口值 即可成功连接
+##服务器端VNCServer操作 vncserver -geometry 1080x720 用geometry选项设置显示区域大小，1080x720可根据个人需求修改 vncserver -list 显示当前账户已打开的vncserver显示端口 vncserver -kill :端口值 杀死该端口值的连接
+·</description>
+    </item>
+    
+    <item>
+      <title>VNC1</title>
+      <link>https://seislesley.github.io/vnc1/</link>
+      <pubDate>Wed, 18 Sep 2019 14:00:29 +0800</pubDate>
+      
+      <guid>https://seislesley.github.io/vnc1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>First</title>
-      <link>https://Seislesley.github.io/post/first/</link>
+      <link>https://seislesley.github.io/post/first/</link>
       <pubDate>Wed, 24 Oct 2018 15:35:04 +0800</pubDate>
       
-      <guid>https://Seislesley.github.io/post/first/</guid>
+      <guid>https://seislesley.github.io/post/first/</guid>
       <description></description>
     </item>
     
     <item>
       <title>About</title>
-      <link>https://Seislesley.github.io/about/</link>
+      <link>https://seislesley.github.io/about/</link>
       <pubDate>Wed, 24 Oct 2018 15:34:47 +0800</pubDate>
       
-      <guid>https://Seislesley.github.io/about/</guid>
+      <guid>https://seislesley.github.io/about/</guid>
       <description></description>
     </item>
     
     <item>
       <title></title>
-      <link>https://Seislesley.github.io/post/test/</link>
+      <link>https://seislesley.github.io/post/test/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://Seislesley.github.io/post/test/</guid>
+      <guid>https://seislesley.github.io/post/test/</guid>
       <description>考试 大题：计算，推导（公式，作业），格林函数相关（基本公式给出），“Hook定律，应力应变关系”需记住 判断题，错误需给出理由； 简答题，什么叫格林函数？什么是应力，应变，应力张量，描述什么？如何描述一个点的应力状态。弹性体基本假设。 柯西公式？ 弹性动力学方程，一套方程，15个 费力第一二定理在做什么 位移表示定理表示什么？特殊情况下的例子。 震源表示定理，基本思路。一个断层产生一个不连续位错，如何表示，说明了什么 等效体力，是否唯一，例子物理意义 力偶 无限介质中的格林函数求解有哪些方法，优缺点的比较 远场P波S波的性质，辐射花样 对简单的问题设立断层面，滑移量，进行求解
 面波 自由振荡求解思路。
 1：30-4:10</description>

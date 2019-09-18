@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.40.3" />
 
-  <title>Topics &middot; 不负时光</title>
+  <title>VNC Viewer On Mac &middot; 不负时光</title>
 
   
   
@@ -39,8 +39,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
  
-  
-  <link rel="alternate" type="application/rss+xml" title="不负时光" href="https://seislesley.github.io/topics/index.xml" />
   
 
   
@@ -76,10 +74,6 @@
   <div class="pure-menu social">
   <ul class="pure-menu-list">
 
-    
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://seislesley.github.io/topics/index.xml"><i class="fa fa-rss fa-fw"></i>RSS</a>
-    </li>
     
 
     
@@ -179,13 +173,86 @@
 
 
 <div class="header">
-  <h1>Topics</h1>
+  <h1>VNC Viewer On Mac</h1>
+  <h2></h2>
 </div>
 <div class="content">
-  <ul>
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>18 Sep 2019, 14:00</time>
+  </div>
+
   
+
   
-  </ul>
+
+  
+
+</div>
+
+  
+
+<h1 id="在mac上用vnc-viewer远程登陆服务器图形化界面">在mac上用VNC Viewer远程登陆服务器图形化界面</h1>
+
+<p>##配置用户VNC Server，用gnome桌面显示
+<code>ssh username@IP</code> ssh 登陆服务器
+<code>vi ~/.vnc/xstartup</code> vi进入配置文件
+<img src="media/15658502682985/15658614856356.jpg" alt="" /></p>
+
+<p>按照上图修改，完成后保存即可生效。主要包括，将文件头前两行取消注释，文件末加入gnome的设置。</p>
+
+<p>##日常使用步骤
+<strong>1. 在服务器端启动VNC Server</strong>
+<code>ssh username@IP</code>
+<code>vncserver</code> 启动VNC Server，启动后会返回端口值
+<img src="media/15658502682985/15658641767836.jpg" alt="" />
+如图，1即为本次建立的连接的端口值</p>
+
+<p><strong>2. 在本地端用VNC Viewer远程连接</strong>
+<img src="media/15658502682985/15658619050044.jpg" alt="" />
+输入 IP:端口值
+即可成功连接</p>
+
+<p>##服务器端VNCServer操作
+<code>vncserver -geometry 1080x720</code> 用geometry选项设置显示区域大小，1080x720可根据个人需求修改
+<code>vncserver -list</code> 显示当前账户已打开的vncserver显示端口
+<code>vncserver -kill :端口值</code> 杀死该端口值的连接</p>
+
+<p>·</p>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="https://seislesley.github.io/post/first/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="https://seislesley.github.io/post/first/">First</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+  </div>
+</div>
+
+
+
+  
+
 </div>
 
 </div>
@@ -212,3 +279,4 @@
 
 </body>
 </html>
+
