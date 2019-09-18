@@ -45,7 +45,7 @@
 
   
 
-  <link rel="shortcut icon" href="https://seislesley.github.io/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="https://seislesley.github.ioimg/favicon.ico" type="image/x-icon" />
 
   
   
@@ -69,6 +69,36 @@
 
   <div class="pure-menu">
     <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://seislesley.github.io/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://seislesley.github.io/post/"><i class='fa fa-list fa-fw'></i>Posts</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://seislesley.github.io/about/"><i class='fa fa-user fa-fw'></i>About</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://seislesley.github.io/topics/"><i class='fa fa-folder fa-fw'></i>Topics</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://seislesley.github.io/tags/"><i class='fa fa-tags fa-fw'></i>Tags</a>
+      
+        </li>
       
     </ul>
   </div>
@@ -164,7 +194,7 @@
 
   <div>
   <div class="small-print">
-    <small>&copy; 2017. All rights reserved.</small>
+    <small>&copy; 2019. All rights reserved.</small>
   </div>
   <div class="small-print">
     <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
@@ -187,13 +217,13 @@
   
     <article>
   <header>
-    <h2><a href="https://seislesley.github.io/post/vnc/">VNC Viewer On Mac</a></h2>
+    <h2><a href="https://seislesley.github.io/post/%E7%AC%AC%E4%B8%80%E8%AE%B220180306/">第一讲</a></h2>
 
     <div class="post-meta">
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>18 Sep 2019, 14:00</time>
+    <time>18 Sep 2019, 18:31</time>
   </div>
 
   
@@ -207,13 +237,64 @@
   </header>
 
   <p>
-  在mac上用VNC Viewer远程登陆服务器图形化界面 ##配置用户VNC Server，用gnome桌面显示 ssh username@IP ssh 登陆服务器 vi ~/.vnc/xstartup vi进入配置文件 按照上图修改，完成后保存即可生效。主要包括，将文件头前两行取消注释，文件末加入gnome的设置。
-##日常使用步骤 1. 在服务器端启动VNC Server ssh username@IP vncserver 启动VNC Server，启动后会返回端口值 如图，1即为本次建立的连接的端口值
-2. 在本地端用VNC Viewer远程连接 输入 IP:端口值 即可成功连接
-##服务器端VNCServer操作 vncserver -geometry 1080x720 用geometry选项设置显示区域大小，1080x720可根据个人需求修改 vncserver -list 显示当前账户已打开的vncserver显示端口 vncserver -kill :端口值 杀死该端口值的连接
-·
+  第一讲 2018.3.6 许力生 地震局地球物理研究所 教材：Modern Global Seismology : Chap 9-10 (第九章基本相同，第十章略有不同） 震源理论：陈运泰 定量地震学（姚振兴，Aki）: 齐全
+##预备知识： 1、均匀弹性全空间中双力偶源产生的位移 $$UP(r,t)=\frac{1}{4\pi\rho r\alpha^3}R^P\dot{M}(r-\frac{r}{\alpha})
+U{SV}(r,t)=\frac{1}{4\pi\rho r\beta^3}R^{SV}\dot{M}(r-\frac{r}{\beta})
+U{SH}(r,t)=\frac{1}{4\pi\rho r\beta^3}R^{SH}\dot{M}(r-\frac{r}{\beta})\$$ $\qquad\frac{1}{4\pi\rho r\alpha^3}$为介质部分，$R^P\dot{M}(r-\frac{r}{\alpha})$为震源部分 $\qquad$其中$\rho-$密度，$\alpha-$P波速度，$\beta-$S波速度，近年来，在研究介质的各向异性时，$\beta{SV}$与$\beta_{SH}$有所不同 $\qquad\dot{M}(t-\frac{r}{\alpha})-$矩率函数，地震矩（1970-1975年间出现的物理量） $\qquad R^P,R^{SV},R^{SH}$为辐射因子，描述震源辐射花样分布 $$R^P=\cos\lambda\sin\delta\sin^2\theta\sin2\phi-\cos\lambda\cos\delta\sin2\theta\cos\phi\+\sin\lambda\sin2\delta(\cos^2\theta-\sin^2\theta\sin^2\phi)+\sin\lambda\cos2\delta\sin2\theta\sin\phi
+R^{SV}=\sin\lambda\cos2\delta\cos2\theta\sin\phi-\cos\lambda\cos\delta\cos2\theta\cos\phi\+\frac{1}{2}\cos\lambda\sin\delta\sin2\theta\sin2\phi-\frac{1}{2}\sin\lambda\sin2\delta\sin2\theta(1+\sin^2\phi)
+R^{SH}=\cos\lambda\cos\delta\cos\theta\sin\phi +\cos\lambda\sin\delta\sin\theta\cos2\phi\+\sin\lambda\cos2\delta\cos\theta\cos\phi-\frac{1}{2}\sin\lambda\sin2\delta\sin\theta\sin2\phi$$ $\qquad\lambda-$滑动角rake，$\delta-$倾角dip，$\theta-$离源角，$\phi=\phi_f-\phi_s,\phi_f-$断层走向（如何看走向：站在断层上盘，看右手边的方向即为断层的走向），$\phi_s-$台站方位(方位角：台站与正北方向沿顺时针的夹角；逆方位角：台站与正北方向沿逆时针的夹角)
+2、震源过程的三个阶段 （1）起始阶段-成核阶段Nucleation （2）破裂/滑动阶段-地震发生在该阶段 （3）愈合阶段Healing
+3、震源动力学方面的定律 #####库伦破裂/失稳准则 Coulomb failure Criterion $$ |\tau|_{failure}=C+\mu_i\sigma_n$$ $\tau-$破裂强度，$C-$内聚力 cohension，$\sigma_n-$正应力，$\mu_i-$内摩擦系数
+#####阿曼顿第二定律（Amonton&rsquo;s Second Law） $$\tau=\mu_s\sigma$$ 与库伦准则对应，但是认为没有内聚力 阿曼顿第一定律：摩擦力与摩擦面大小无关
+#####贝叶力定律 Byerlee&rsquo;s Law $$|\tau|=50+0.6\sigma_n\quad \sigma&gt;200MPa
+|\tau|=0.85\sigma_n\quad\sigma&lt;200MPa$$ 即，环境应力超过200MPa时，具有内聚力项；环境应力小于200MPa时，没有内聚力项
+4、库伦准则的莫尔圆表示 一个断层形成的方向与最大压应力成$90^o-\theta,\theta=+-(45^o+\frac{\phi}{2})$ $\mu_i=\tan\phi\quad\Rightarrow\quad$ 对于大多数岩石，$\phi=30^o$；对于$\mu_i=0$时，$\phi=45^o$ 逆断层，倾角理论值为$30^o$，实际为$30^o$左右，一般小于 正断层，倾角理论值为$60^o$，实际为$60^o$左右，一般小于
+走滑断层 $\sigma_1&gt;\sigma_2&gt;\sigma_3$， 拉应力，（中间应力一定与破裂在同一个面内） 压应力 but 待解决的问题 雅安地震算出来45度
   </p>
 
+  
+  <footer>
+    <a href="https://seislesley.github.io/post/%E7%AC%AC%E4%B8%80%E8%AE%B220180306/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://seislesley.github.io/post/markdown-%E8%AF%AD%E6%B3%95%E5%92%8C-mweb-%E5%86%99%E4%BD%9C%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/">Markdown Mweb</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>18 Sep 2019, 18:09</time>
+  </div>
+
+  
+
+  
+
+  
+
+</div>
+
+  </header>
+
+  <p>
+  Markdown 语法和 MWeb 写作使用说明 Markdown 的设计哲学  Markdown 的目標是實現「易讀易寫」。 不過最需要強調的便是它的可讀性。一份使用 Markdown 格式撰寫的文件應該可以直接以純文字發佈，並且看起來不會像是由許多標籤或是格式指令所構成。 Markdown 的語法有個主要的目的：用來作為一種網路內容的*寫作*用語言。
+ 本文约定 如果有写 效果如下：， 在 MWeb 编辑状态下只有用 CMD + 4 或 CMD + R 预览才可以看效果。
+标题 Markdown 语法：
+# 第一级标题 `&lt;h1&gt;` ## 第二级标题 `&lt;h2&gt;` ###### 第六级标题 `&lt;h6&gt;`  效果如下：
+第一级标题 &lt;h1&gt; 第二级标题 &lt;h2&gt; 第六级标题 &lt;h6&gt; 强调 Markdown 语法：
+*这些文字会生成`&lt;em&gt;`* _这些文字会生成`&lt;u&gt;`_ **这些文字会生成`&lt;strong&gt;`** __这些文字会生成`&lt;strong&gt;`__  在 MWeb 中的快捷键为： CMD + U、CMD + I、CMD + B 效果如下：
+这些文字会生成&lt;em&gt; 这些文字会生成&lt;u&gt;
+  </p>
+
+  
+  <footer>
+    <a href="https://seislesley.github.io/post/markdown-%E8%AF%AD%E6%B3%95%E5%92%8C-mweb-%E5%86%99%E4%BD%9C%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
   
 </article>
 
@@ -240,38 +321,7 @@
   </header>
 
   <p>
-  
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://seislesley.github.io/post/test/"></a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>01 Jan 0001, 00:00</time>
-  </div>
-
-  
-
-  
-
-  
-
-</div>
-
-  </header>
-
-  <p>
-  考试 大题：计算，推导（公式，作业），格林函数相关（基本公式给出），“Hook定律，应力应变关系”需记住 判断题，错误需给出理由； 简答题，什么叫格林函数？什么是应力，应变，应力张量，描述什么？如何描述一个点的应力状态。弹性体基本假设。 柯西公式？ 弹性动力学方程，一套方程，15个 费力第一二定理在做什么 位移表示定理表示什么？特殊情况下的例子。 震源表示定理，基本思路。一个断层产生一个不连续位错，如何表示，说明了什么 等效体力，是否唯一，例子物理意义 力偶 无限介质中的格林函数求解有哪些方法，优缺点的比较 远场P波S波的性质，辐射花样 对简单的问题设立断层面，滑移量，进行求解
-面波 自由振荡求解思路。
-1：30-4:10
+  #This is a test
   </p>
 
   
@@ -286,7 +336,7 @@
 
 </div>
 </div>
-<script src="https://seislesley.github.io/js/ui.js"></script>
+<script src="https://seislesley.github.iojs/ui.js"></script>
 
 
 <script>
